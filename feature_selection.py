@@ -143,7 +143,6 @@ print(importances)
 df_features = pd.DataFrame(importances)
 df_features.to_csv('2.out_VariableImportance.csv', sep=',')
 cm.to_csv('1.out_ConfusionMatrix.csv', sep=',')
-cm.to_csv('4.out_ConfusionMatrix.csv', sep=',')
 
 # Show confusion matrix in a separate window
 plt.matshow(cm)
