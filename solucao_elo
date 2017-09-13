@@ -1,0 +1,67 @@
+[Command: python -u C:\Users\schneider\Desktop\dkt\SoccerPrediction\main.py]
+             Team          ELO
+0     Aston Villa  1379.124976
+1         Everton  1475.472026
+2          Fulham  1482.851794
+3        Man City  1358.699383
+4   Middlesbrough  1432.493113
+5      Portsmouth  1404.313207
+6      Sunderland  1082.544265
+7        West Ham  1479.729791
+8         Arsenal  1665.128287
+9           Wigan  1402.152844
+10     Birmingham  1348.527814
+11      Blackburn  1592.664848
+12       Charlton  1432.415652
+13      Liverpool  1808.122453
+14     Man United  1797.463469
+15      Newcastle  1558.133509
+16      Tottenham  1595.506338
+17      West Brom  1253.695606
+18         Bolton  1513.381645
+19        Chelsea  1937.578978
+                Team          ELO
+0        Aston Villa  1397.418508
+1            Everton  1484.007179
+2             Fulham  1285.081633
+3           Man City  1261.754787
+4      Middlesbrough  1348.830853
+5         Portsmouth  1369.230668
+6            Watford  1219.093392
+7           West Ham  1304.509935
+8            Arsenal  1817.878299
+9              Wigan  1222.435208
+10           Reading  1403.169474
+11         Blackburn  1459.612128
+12          Charlton  1270.163403
+13         Liverpool  1945.190344
+14        Man United  2251.158132
+15         Newcastle  1321.475055
+16         Tottenham  1541.683961
+17  Sheffield United  1291.782480
+18            Bolton  1457.832472
+19           Chelsea  2347.692089
+             Team          ELO
+0     Aston Villa  1470.641684
+1         Everton  1529.560696
+2          Fulham  1074.643717
+3        Man City  1259.511877
+4   Middlesbrough  1214.263748
+5      Portsmouth  1347.607513
+6           Derby   828.025524
+7        West Ham  1274.104594
+8         Arsenal  2259.092283
+9           Wigan  1123.887375
+10        Reading  1138.963127
+11      Blackburn  1429.041390
+12     Birmingham  1192.405346
+13      Liverpool  2270.054864
+14     Man United  2710.137551
+15      Newcastle  1207.352874
+16      Tottenham  1398.271981
+17     Sunderland  1244.935360
+18         Bolton  1205.930473
+19        Chelsea  2821.568021
+total
+29999.999999999996
+[Finished in 7.292s]

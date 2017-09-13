@@ -118,7 +118,6 @@ def main():
         # guardando o novo elo dos times no dataframe com times e elos
         df_unique.loc[df_unique.Team == home_team, 'ELO'] = new_home_elo
         df_unique.loc[df_unique.Team == away_team, 'ELO'] = new_away_elo
-        print(df_unique)
 
     # times rebaixados da temporada 05-06
     # 18. Birmingham City
@@ -130,17 +129,52 @@ def main():
     # 2. Sheffield United
     # 3. Watford
 
+    print(df_unique)
+
     # Reading ganha a pontuação do Birmingham City
     # Sheffield United ganha a pontuação do West Bromwich Albion
     # Watford ganha a pontuação do Sunderland
 
+    df_unique.loc[df_unique.Team == 'Birmingham', 'Team'] = 'Reading'
+    df_unique.loc[df_unique.Team == 'West Brom', 'Team'] = 'Sheffield United'
+    df_unique.loc[df_unique.Team == 'Sunderland', 'Team'] = 'Watford'
 
+    # temporada 06-07
+    for index, row in df_6.iterrows():
+
+        # variáveis de interesse para o cálculo do ELO
+        # FTHG = full time hometeam goals
+        # FTAG = full time away goals
+        # FTR = full time result
+        h = df_7.loc[index,'FTHG']
+        a = df_7.loc[index,'FTAG']
+        f = df_7.loc[index,'FTR']
+
+        # identificando o mandante e o visitante da linha em questão
+        home_team = df_7.loc[index,'HomeTeam']
+        away_team = df_7.loc[index,'AwayTeam']
+
+        # procurando o elo antigo dos times no dataframe com times e elos
+        # salvando os elos antigos em variáveis
+        old_home_elo = df_unique.loc[df_unique.Team == home_team, 'ELO'].item()
+        old_away_elo = df_unique.loc[df_unique.Team == away_team, 'ELO'].item()
+
+
+        # calculando o novo elo
+        new_home_elo,new_away_elo = get_new_scores(old_home_elo,old_away_elo,h,a,f)
+
+        # guardando o novo elo dos times no dataframe com times e elos
+        df_unique.loc[df_unique.Team == home_team, 'ELO'] = new_home_elo
+        df_unique.loc[df_unique.Team == away_team, 'ELO'] = new_away_elo
+
+    print(df_unique)
 
 if __name__ == '__main__':
     main()
     total = 0
     for index, row in df_unique.iterrows():
         total += df_unique.loc[index,'ELO'].item()
+    print('total')
     print(total)
     #df_6.to_csv('3.ELO.csv', sep=';')
     #print(df_unique)
